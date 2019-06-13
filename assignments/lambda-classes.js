@@ -19,10 +19,10 @@ class Instructor extends Person{
         this.catchPhrase = attribute.catchPhrase;
     }
     demo(subject) {
-        return `Today we are learning about ${subject}`;
+        console.log(`Today we are learning about ${subject}.`);
     }
     grade(subject) {
-        return `${student.name} receives a perfect score on ${subject}`;
+        console.log(`${student.name} receives a perfect score on ${subject}`);
     }
 }
 
@@ -34,13 +34,13 @@ class Student extends Person{
         this.favSubjects = attribute.favSubjects;
     }
     listsSubjects() {
-        return [favSubjects];
+        console.log(favSubjects);
     }
     PRAssignment(subject) {
-        return `${student.name} has submitted a PR for ${subject}.`;
+        console.log(`${student.name} has submitted a PR for ${subject}.`);
     }
     sprintChallenge(subject) {
-        return `${student.name} has begun sprint challenge on ${subject}`;
+        console.log(`${student.name} has begun sprint challenge on ${subject}`);
     }
 }
 
@@ -51,10 +51,10 @@ class ProjectManagers extends Instructor{
         this.favInstructor = attribute.favInstructor;
     }
     standUp(channel) {
-        return `${name} announces to ${channel}, @channel standy times!`;
+        console.log(`${name} announces to ${channel}, @channel standy times!`);
     }
     grade(subject) {
-        return `${name} debugs ${student.name}'s code on ${subject}.`;
+        console.log(`${name} debugs ${student.name}'s code on ${subject}.`);
     }
 }
 
@@ -82,7 +82,7 @@ const kevin = new Instructor({
     age: 42,
     previousBackground: 'Sniffing cats',
     className: 'Web21',
-    favSubjects: [CSS, Html]
+    favSubjects: ["CSS", "Html"]
   });
 
   const frank = new Student({
@@ -91,5 +91,5 @@ const kevin = new Instructor({
     age: 13,
     previousBackground: `Eating spaghetti o's`,
     className: 'Web19',
-    favSubjects: [Python, JavaScript]
+     favSubjects: ["Python", "JavaScript"]
   });

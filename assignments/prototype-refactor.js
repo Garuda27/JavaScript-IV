@@ -11,7 +11,7 @@ class GameObject{
     constructor(options) {
     this.createdAt = options.createdAt;
     this.dimensions = options.dimensions;
-    this.name = options.name;
+
 }
     destroy() {
         return `${this.name} was removed from the game.`;
@@ -19,10 +19,11 @@ class GameObject{
 }
 
 
-class CharacterStats {
-    constructor(characterStatsOptions){
-    GameObject.call(this, characterStatsOptions);
-    this.healthPoints = characterStatsOptions.healthPoints;
+class CharacterStats extends GameObject{
+    constructor(options){
+    super(options);
+    this.healthPoints = options.healthPoints;
+    this.name = options.name;
 }
     takeDamage() {
         return `${this.name} took damage.`;
@@ -31,20 +32,17 @@ class CharacterStats {
 
 
 
-class Humanoid{
-    constructor(humanoidOptions){
-    CharacterStats.call(this, humanoidOptions);
-    this.team = humanoidOptions.team;
-    this.weapons = humanoidOptions.weapons;
-    this.language = humanoidOptions.language;
+class Humanoid extends CharacterStats{
+    constructor(options){
+        super(options);
+        this.faction = options.faction;
+        this.weapons = options.weapons;
+        this.language = options.language;
 }
     greet() {
         return `${this.name} offers a greeting in ${this.language}.`;
 }   
 }
-
-
-
 
 const mage = new Humanoid({
     createdAt: new Date(),
