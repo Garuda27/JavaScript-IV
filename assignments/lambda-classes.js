@@ -57,3 +57,39 @@ class ProjectManagers extends Instructor{
         return `${name} debugs ${student.name}'s code on ${subject}.`;
     }
 }
+
+const kevin = new Instructor({
+    name: 'Kevin',
+    location: 'California',
+    age: 35,
+    favLanguage: 'JavaScript',
+    specialty: 'Front-end',
+    catchPhrase: 'Anyone else smell popcorn?'
+  });
+
+  const nicole = new Instructor({
+    name: 'Nicole',
+    location: 'Colorado',
+    age: 28,
+    favLanguage: 'Java',
+    specialty: 'Back-end',
+    catchPhrase: `I'd totally have a crush on me!`
+  });
+
+  const marha = new Student({
+    name: 'Marha',
+    location: 'Alaska',
+    age: 42,
+    previousBackground: 'Sniffing cats',
+    className: 'Web21',
+    favSubjects: [CSS, Html]
+  });
+
+  const frank = new Student({
+    name: 'Francisco',
+    location: 'Puerto Rico',
+    age: 13,
+    previousBackground: `Eating spaghetti o's`,
+    className: 'Web19',
+    favSubjects: [Python, JavaScript]
+  });
