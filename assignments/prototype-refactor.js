@@ -42,7 +42,6 @@ class Humanoid{
         return `${this.name} offers a greeting in ${this.language}.`;
 }   
 }
-Humanoid.prototype = Object.create(CharacterStats.prototype);
 
 
 
